@@ -3,6 +3,26 @@
 ## Building
 To build, just run `make`. This project uses `clang` by default, but it can also be compiled on `gcc`.
 
+## `man todoer`
+```
+DESCRIPTION:
+  This program recursively searches the files in the CWD (current working directory) for TODO comments and prints them to STDOUT with file and line/column number information.
+
+Usage: todoer [OPTIONS]
+
+OPTIONS:
+  -c		Just print the number of TODOs found
+  
+  -d <PATH>	Start searching for TODOs in the directory specified by path.
+     		Path must point to a _directory_.
+
+  -e <DNAMES>	Exclude directories whose name matches of the names provided.
+     		Ex: -e 'build_output;dist' to exclude files in the 'build_output' and 'dist' directories.
+
+EXAMPLES:
+  todoer -d ~/source/my-proj -e 'dist;node_modules'	Get all the TODOs in the my-proj directory
+```
+
 ## The point
 The point of this is to have a utility that tracks all my TODOs in my software projects. This would only ever be a backend to the tracking of TODOs.
 
