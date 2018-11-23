@@ -15,7 +15,7 @@ OPTIONS:
   -c		Just print the number of TODOs found
   
   -d <PATH>	Start searching for TODOs in the directory specified by path.
-     		Path must point to a _directory_.
+     		Path must point to a directory.
 
   -e <DNAMES>	Exclude directories whose name matches of the names provided.
      		Ex: -e 'build_output;dist' to exclude files in the 'build_output' and 'dist' directories.
@@ -49,4 +49,4 @@ The point of this is to have a utility that tracks all my TODOs in my software p
 This project has also been created as a way to compare C with Rust in performance and ease of development. Eventually, I will write a Rust version of this tool and will measure some benchmarks between both programs.
 
 ## License
-Standard MIT license. 
+Standard MIT License
