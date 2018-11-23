@@ -179,7 +179,28 @@ void walkDirectoryTree(Options *opts) {
 }
 
 void print_help() {
-  printf("This is the help output!\n");
+  printf("DESCRIPTION:\n"
+	 "  This program recursively searches the files in the CWD (current working directory) for TODO comments\n"
+	 "  and prints them to STDOUT with file and line/column number information.\n"
+	 "\n"
+	 "Usage: todoer [OPTIONS]\n"
+	 "\n"
+	 "OPTIONS:\n"
+	 "  -c           Just print the number of TODOs found\n"
+	 "  -d <PATH>    Start searching for TODOs in the directory specified by path.\n"
+	 "               Path must point to a directory.\n"
+	 "  -e <DNAMES>  Exclude directories whose name matches of the names provided.\n"
+	 "               Ex: -e 'build_output;dist' to exclude files in the 'build_output' and 'dist' directories.\n"
+	 "\n"
+	 "EXAMPLES:\n"
+	 "  todoer -d ~/source/my-proj -e 'dist;node_modules'     Get all the TODOs in the my-proj directory while\n"
+	 "                                                        excluding files in the 'dist' and 'node_modules'\n"
+	 "                                                        directories.\n"
+	 "  todoer -cd ~/source/my-proj                           Print the number of TODOs found in the my-proj\n"
+	 "                                                        directory.\n"
+	 "\n"
+	 "LICENSE:\n"
+	 "  MIT\n\n");
 }
 
 void parse(int argc, char **argv, Options *opts) {
